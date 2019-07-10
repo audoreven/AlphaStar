@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class LearningByExample {
 	public static void main(String[] args) {
-		// medians
+		// redo ENTIRE LOGIC oml i suck
 		Scanner reader = new Scanner(System.in);
 		String[] temp = reader.nextLine().split(" ");
 		int n = Integer.parseInt(temp[0]);
@@ -20,6 +20,11 @@ public class LearningByExample {
 		}
 		Collections.sort(cows);
 		int s = 0;
+		if (cows.get(0).weight>a) {
+			if (cows.get(0).spots) {
+				s=cows.get(0).weight-a;
+			}
+		}
 		for (int i = 0; i < cows.size() - 1; i++) {
 			int x = cows.get(i).weight;
 			int y = cows.get(i + 1).weight;
@@ -50,6 +55,10 @@ public class LearningByExample {
 		}
 		System.out.println(s);
 		reader.close();
+	}
+	
+	static void count(ArrayList<Cows> c, int min, int max) {
+		
 	}
 
 	static class Cows implements Comparable<Cows> {

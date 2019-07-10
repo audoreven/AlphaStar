@@ -29,40 +29,40 @@ public class CombinationLock {
 		int x=0;
 		int y=0;
 		int z=0;
-		if (Math.abs(combo1[0]-combo2[0])<5 || Math.abs(combo1[0]-combo2[0])>N-2) {
+		if (Math.abs(combo1[0]-combo2[0])<5 || Math.abs(combo1[0]-combo2[0])>N-5) {
 			x=5-Math.abs(combo1[0]-combo2[0]);
-			if (combo1[0]+combo2[0]>N) {
-				if (combo1[0]>N/2) {
-					combo1[0]=combo1[0]-N;
+			if (Math.abs(combo1[0]-combo2[0])>N-5) {
+				if (combo1[0]<5) {
+					combo1[0]=combo1[0]+N;
 				}
-				else if (combo2[0]>N/2) {
-					combo2[0]=combo2[0]-N;
+				else if (combo2[0]<5) {
+					combo2[0]=combo2[0]+N;
 				}
 				x=5-Math.abs(combo1[0]-combo2[0]);
 			}
 		}
-		if (Math.abs(combo1[1]-combo2[1])<5 || Math.abs(combo1[1]-combo2[1])>N-2) { 
+		if (Math.abs(combo1[1]-combo2[1])<5 || Math.abs(combo1[1]-combo2[1])>N-5) { 
 			y=5-Math.abs(combo1[1]-combo2[1]);
-			if (combo1[1]+combo2[1]>N) {
-				if (combo1[1]>N/2) {
-					combo1[1]=combo1[1]-N;
+			if (Math.abs(combo1[1]-combo2[1])>N-5) {
+				if (combo1[1]<5) {
+					combo1[1]=combo1[1]+N;
 				}
-				else if (combo2[1]>N/2) {
-					combo2[1]=combo2[1]-N;
+				else if (combo2[1]<5) {
+					combo2[1]=combo2[1]+N;
 				}
-				x=5-Math.abs(combo1[1]-combo2[1]);
+				y=5-Math.abs(combo1[1]-combo2[1]);
 			}
 		}
-		if (Math.abs(combo1[2]-combo2[2])<5 || Math.abs(combo1[2]-combo2[2])>N-2) {
+		if (Math.abs(combo1[2]-combo2[2])<5 || Math.abs(combo1[2]-combo2[2])>N-5) {
 			z=5-Math.abs(combo1[2]-combo2[2]);
-			if (combo1[2]+combo2[2]>N) {
-				if (combo1[2]>N/2) {
-					combo1[2]=combo1[2]-N;
+			if (Math.abs(combo1[2]-combo2[2])>N-5) {
+				if (combo1[2]<5) {
+					combo1[2]=combo1[2]+N;
 				}
-				else if (combo2[2]>N/2) {
-					combo2[2]=combo2[2]-N;
+				else if (combo2[2]<5) {
+					combo2[2]=combo2[2]+N;
 				}
-				x=5-Math.abs(combo1[2]-combo2[2]);
+				z=5-Math.abs(combo1[2]-combo2[2]);
 			}
 		}
 		return x*y*z;
