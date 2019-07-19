@@ -33,7 +33,7 @@ public class WordMorph {
 		words.add(start);
 		words.add(end);
 		String temp;
-		while ((temp=br.readLine())!=null) {
+		while (!(temp=br.readLine()).isEmpty()) {
 			if (temp.length()==start.length()) {
 				dictionary.put(temp, 0);
 				words.add(temp);
